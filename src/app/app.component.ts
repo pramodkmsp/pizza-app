@@ -15,5 +15,4 @@ export class AppComponent {
       behavior: 'smooth'
     });
   }
-  
 }
