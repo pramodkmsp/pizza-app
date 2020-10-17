@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Orders } from '../interface/orders';
 import { environment } from 'src/environments/environment';
-
 const baseUrl = environment.baseUrl;
 @Injectable({
   providedIn: 'root'
