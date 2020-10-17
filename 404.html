@@ -7,9 +7,26 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 <link rel="stylesheet" href="styles.e62811646ea0adb745ea.css"></head>
 <body class="mat-typography">
   <app-root></app-root>
-<script src="runtime-es2015.cfe1cbc84d82e99d5d23.js" type="module"></script><script src="runtime-es5.cfe1cbc84d82e99d5d23.js" nomodule defer></script><script src="polyfills-es5.5e657f60015c1df344ba.js" nomodule defer></script><script src="polyfills-es2015.1c036d218568a752e64f.js" type="module"></script><script src="main-es2015.8981825ebd936e89ce41.js" type="module"></script><script src="main-es5.8981825ebd936e89ce41.js" nomodule defer></script></body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+          $('.scrollToTop').fadeIn();
+        } else {
+          $('.scrollToTop').fadeOut();
+        }
+      });
+      $('.scrollToTop').click(function () {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
+      });
+    });
+  </script>
+<script src="runtime-es2015.f6f73b1bc234acc94e5c.js" type="module"></script><script src="runtime-es5.f6f73b1bc234acc94e5c.js" nomodule defer></script><script src="polyfills-es5.5e657f60015c1df344ba.js" nomodule defer></script><script src="polyfills-es2015.1c036d218568a752e64f.js" type="module"></script><script src="main-es2015.d02236406dbe2f05da99.js" type="module"></script><script src="main-es5.d02236406dbe2f05da99.js" nomodule defer></script></body>
 </html>
