@@ -6,12 +6,13 @@
 .orders {
   background-color: #ffffff;
   color: #000;
+  line-height: 25px;
   border: 1px solid;
 }
 
 .order-label {
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .shop-tracking-status .form-horizontal {
@@ -114,19 +115,14 @@
   background-image: url('../../../assets/order-recieved.jpg');
 }
 
-
-
 .shop-tracking-status .image-order-status-active {
   left: 50%;
   transform: translate(-50%, 0%);
 }
 
-
-
 .shop-tracking-status .image-order-status-active .icon {
   background-image: url('../../../assets/processing.jpg');
 }
-
 
 .shop-tracking-status .image-order-status-delivered .status {
   top: 85px;

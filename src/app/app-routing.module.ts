@@ -20,7 +20,7 @@ const routes: Routes = [
     loadChildren: () => import('./components/order-details/order-details.module').then(m => m.OrderDetailsModule),
   },
   {
-    path: '***',
+    path: '**',
     component: PageNotFoundComponent
   }
 ];

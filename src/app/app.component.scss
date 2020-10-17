@@ -5,10 +5,12 @@
     margin-bottom: 50px;
 }
 
-.scroll-up {
+.scrollToTop {
     position: fixed;
     right: 10px;
     bottom: 10px;
     z-index: 99;
-    border: 1px solid #c0c0c0;
+    border: 1px solid #524e4e;
+    background-color: #f7d0d0;
+    display: none;
 }

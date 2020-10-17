@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl : 'https://my-json-server.typicode.com/pramodkmsp/shoppingcart-json-server/'
+  baseUrl : 'assets/db.json'
 };
 
 /*

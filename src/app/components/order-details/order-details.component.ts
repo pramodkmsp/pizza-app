@@ -22,13 +22,17 @@ export class OrderDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /* Get Order Details Of Ordered Items*/
   getOrderDetails() {
     this.dataService.getOrderDetails(this.orderId).then((data: any) => {
-      this.orderDetails = data;
+      if (data) {
+        this.orderDetails = data;
+      }
     });
   }
 
+  /* Get Total Amount Of Order Items*/
   getTotalAmount(items: any) {
-    return this.dataService.getTotalAmount(items)
+    return this.dataService.getTotalAmount(items);
   }
 }

@@ -20,20 +20,24 @@ export class OrdersComponent implements OnInit {
   constructor(private dataService: DataService, private snackBar: MatSnackBar) {}
 
   orderedData: Orders[];
+
   ngOnInit(): void {
     this.getOrders();
   }
 
+  /* Get Total Orders*/
   getOrders() {
     this.dataService.getOrders().then((data: any) => {
       this.orderedData = data;
     });
   }
 
+  /* Get Total Amounts*/
   getTotalAmount(items: any) {
     return this.dataService.getTotalAmount(items);
   }
 
+  /* Change order status */
   changeStatus(order: any) {
     const req = {
       ...order,
