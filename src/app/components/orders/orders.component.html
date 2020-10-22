@@ -1,7 +1,8 @@
 <section class="col-sm-12 col-md-10 col-lg-8 col-xl-8 mx-auto p-2 m-0 mt-5">
   <div class="row p-2 m-0">
   <label class="col-12 mt-3 mb-3 text-center order-label">Orders List</label>
-    <div class="col-12 p-2 m-0 orders card mb-2" *ngFor="let order of orderedData">
+  <input type="text" class="form-control mb-3" [(ngModel)]="searchText" placeholder="Search orders...">
+    <div class="col-12 p-2 m-0 orders card mb-2" *ngFor="let order of orderedData | search: searchText">
       <div class="p-0 m-0 col-12 mx-auto">
         <label class="row p-0 m-0">
           <span class="col-4 p-0 m-0"><strong>Customer Name</strong></span>

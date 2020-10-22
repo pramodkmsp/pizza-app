@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SharedModule } from './shared/shared/shared.module';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [

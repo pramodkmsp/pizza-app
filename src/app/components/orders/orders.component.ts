@@ -20,6 +20,7 @@ export class OrdersComponent implements OnInit {
   constructor(private dataService: DataService, private snackBar: MatSnackBar) {}
 
   orderedData: Orders[];
+  searchText: any;
 
   ngOnInit(): void {
     this.getOrders();
