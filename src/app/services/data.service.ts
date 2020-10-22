@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Register } from '../interface/register';
 const baseUrl = environment.baseUrl;
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,7 @@ export class DataService {
   /* Orders Mock JSON Data */
   orders: any[] = [{
       id: 1,
+      customerId: 1001,
       customerName: 'Rupesh',
       address: 'Bangalore',
       status: 'Preparing',
@@ -21,6 +23,7 @@ export class DataService {
     },
     {
       id: 2,
+      customerId: 1002,
       customerName: 'Pramod',
       address: 'Mysore',
       status: 'Ready to serve',
@@ -38,6 +41,7 @@ export class DataService {
     },
     {
       id: 3,
+      customerId: 1003,
       customerName: 'Prajwal',
       address: 'Manglore',
       status: 'Order Received',
@@ -49,6 +53,7 @@ export class DataService {
     },
     {
       id: 4,
+      customerId: 1004,
       customerName: 'Ravikumar',
       address: 'Mandya',
       status: 'Order Received',
@@ -60,6 +65,7 @@ export class DataService {
     },
     {
       id: 5,
+      customerId: 1005,
       customerName: 'Rajesh',
       address: 'Andrapradesh',
       status: 'Order Received',
@@ -71,6 +77,7 @@ export class DataService {
     },
     {
       id: 6,
+      customerId: 1006,
       customerName: 'Ganesh',
       address: 'Bangalore',
       status: 'Order Received',
@@ -79,13 +86,65 @@ export class DataService {
         price: 600,
         quantity: 2
       }]
-    }
+    },
+    {
+      id: 7,
+      customerId: 1001,
+      customerName: 'Rupesh',
+      address: 'Bangalore',
+      status: 'Preparing',
+      items: [{
+        itemName: 'Burger',
+        price: 200,
+        quantity: 2
+      }]
+    },
+    {
+      id: 8,
+      customerId: 1002,
+      customerName: 'Pramod',
+      address: 'Mysore',
+      status: 'Ready to serve',
+      items: [{
+          itemName: 'Burger',
+          price: 100,
+          quantity: 2
+        },
+        {
+          itemName: 'Burger Special',
+          price: 1150,
+          quantity: 2
+        }
+      ]
+    },
+    {
+      id: 9,
+      customerId: 1002,
+      customerName: 'Pramod',
+      address: 'Mysore',
+      status: 'Ready to serve',
+      items: [{
+          itemName: 'Pizza',
+          price: 100,
+          quantity: 2
+        },
+        {
+          itemName: 'Pizza Special',
+          price: 1150,
+          quantity: 2
+        }
+      ]
+    },
   ];
 
   constructor(private httpClient: HttpClient) {
     if (!JSON.parse(localStorage.getItem('orders'))) {
       localStorage.setItem('orders', JSON.stringify(this.orders));
     }
+  }
+
+  register(data: Register) {
+    return;
   }
 
   /* get Orders */

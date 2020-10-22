@@ -28,7 +28,10 @@ export class OrdersComponent implements OnInit {
   /* Get Total Orders*/
   getOrders() {
     this.dataService.getOrders().then((data: any) => {
-      this.orderedData = data;
+      const currentUser = JSON.parse(localStorage.getItem('loggedInUser'));
+      this.orderedData = data.filter(orders => {
+        return orders.customerId === currentUser.customerId ? orders : '';
+      });
     });
   }
 

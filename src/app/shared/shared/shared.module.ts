@@ -1,4 +1,5 @@
 import {NgModule} from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -7,6 +8,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
   exports: [
     MatSnackBarModule,
     MatToolbarModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule {}
