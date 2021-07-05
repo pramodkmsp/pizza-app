@@ -1,6 +1,6 @@
 node {
     stage ("Checkout SCM"){
-        git-branch: 'master', url: 'https://github.com/pramodkmsp/pizza-app.git'
+        git-branch: 'master', url: 'git@github.com:pramodkmsp/pizza-app.git'
     }
     stage ("Install Node modules") {
         steps {
